@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router"
+import { useParams } from "react-router"
 import { BsCartPlus } from 'react-icons/bs'
 import { useEffect, useState, useContext } from "react"
 import { api } from "../../Services/api"
@@ -53,7 +53,7 @@ export function Detail() {
                                     currency: "BRL"
                                 })}
                             </strong>
-                            <button className="bg-zinc-900 p-1 rounded ml-3" onClick={(e) => handleAddCartItem(products)}>
+                            <button className="bg-zinc-900 p-1 rounded ml-3" onClick={() => handleAddCartItem(products)}>
                                 <BsCartPlus size={20} color='#FFF' />
                             </button>
                         </div>
